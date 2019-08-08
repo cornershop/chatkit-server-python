@@ -1,7 +1,7 @@
 import json
 
 from .exceptions import PusherBadAuth, PusherBadRequest, PusherBadStatus, PusherForbidden, PusherNotFound
-from urllib.parse import urlencode, quote_plus
+from six.moves.urllib.parse import urlencode, quote_plus
 
 
 class PusherChatKitClient(object):
