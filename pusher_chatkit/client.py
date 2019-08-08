@@ -1,6 +1,6 @@
 import json
 
-from pusher_chatkit.exceptions import PusherBadAuth, PusherBadRequest, PusherBadStatus, PusherForbidden, PusherNotFound
+from .exceptions import PusherBadAuth, PusherBadRequest, PusherBadStatus, PusherForbidden, PusherNotFound
 from urllib.parse import urlencode, quote_plus
 
 
