@@ -1,10 +1,11 @@
 import jwt
 
 from datetime import datetime
-from pusher_chatkit import constants
-from pusher_chatkit.backends import RequestsBackend
-from pusher_chatkit.client import PusherChatKitClient
-from pusher_chatkit.exceptions import PusherNotFound
+
+from . import constants
+from .backends import RequestsBackend
+from .client import PusherChatKitClient
+from .exceptions import PusherNotFound
 
 
 class PusherChatKit(object):
