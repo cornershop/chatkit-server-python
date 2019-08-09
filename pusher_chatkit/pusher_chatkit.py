@@ -1,6 +1,6 @@
 import jwt
 
-from datetime import datetime
+import time
 
 from . import constants
 from .backends import RequestsBackend
@@ -38,7 +38,7 @@ class PusherChatKit(object):
         split_instance_locator = self.instance_locator.split(':')
         split_key = self.api_key.split(':')
 
-        now = int(datetime.now().timestamp())
+        now = int(time.time())
         claims = {
             'instance': split_instance_locator[2],
             'iss': 'api_keys/{}'.format(split_key[0]),
