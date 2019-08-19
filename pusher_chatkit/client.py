@@ -15,7 +15,7 @@ class PusherChatKitClient(object):
         self.services = {
             'api': {
                 'service_name': 'chatkit',
-                'service_version': 'v2'
+                'service_version': 'v6'
             },
             'authorizer': {
                 'service_name': 'chatkit_authorizer',
