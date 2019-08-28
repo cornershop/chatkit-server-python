@@ -270,7 +270,7 @@ class PusherChatKit(object):
             'api',
             '/rooms',
             body=body,
-            token=self.generate_token(user_id=creator_id)
+            token=self.generate_token(user_id=creator_id, su=True)
         )
 
     def update_room(self, room_id, name=None, private=False, custom_data=None):
