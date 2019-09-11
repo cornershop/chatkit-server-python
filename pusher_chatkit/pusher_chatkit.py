@@ -454,13 +454,13 @@ class PusherChatKit(object):
     # MESSAGES
     #
 
-    def send_message(self, sender_id, room_id, text, attachment=None):
+    def send_message(self, sender_id, room_id, parts, attachment=None):
         """
         Sends a message in a chat room.
 
-        :param sender_id: Id of the User sending the message.
+        :param sender_id: Id of the user sending message.
         :param room_id: Id of the Room to send the message into.
-        :param text: Message text.
+        :param parts: MultiPart message payload.
         :param attachment: Attachment to send alongside the message.
 
         :return: message_id if successful.
@@ -469,11 +469,10 @@ class PusherChatKit(object):
             'api',
             '/rooms/{}/messages'.format(room_id),
             body={
-                'sender_id': sender_id,
-                'text': text,
+                "parts": parts,
                 'attachment': attachment
             },
-            token=self.generate_token(su=True)
+            token=self.generate_token(user_id=sender_id, su=True)
         )
 
     def delete_message(self, message_id):
