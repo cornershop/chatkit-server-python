@@ -119,7 +119,7 @@ class PusherChatKit(object):
         return self.client.post(
             'api',
             '/batch_users',
-            body=users,
+            body={'users': users},
             token=self.generate_token(su=True)
         )
 
